@@ -1,0 +1,43 @@
+const HeroSection = () => {
+  return (
+    <div className="pt-20 pb-10 overflow-hidden">
+      <div className="flex flex-col px-6 my-0 mx-auto">
+        <div className="flex mb-10">
+          <div className="flex flex-col max-w-[480px] px-0 ml-2.5 mr-0">
+            <p className="text-customBlue text-2xl pb-4 tracking-[-0.02em]">
+              Full stack technology agency
+            </p>
+            <h1
+              style={{
+                textShadow: "0 3px 6px #302cff1c",
+              }}
+              className="text-5xl font-bold text-customBlue2 -mr-[157px] mb-4 leading-[1.3] tracking-[-0.02em]"
+            >
+              We are a team of Full-Stack MarTech Experts
+            </h1>
+            <p className="tracking-normal max-w-[451px] mb-[39px] mr-0 text-gray-600">
+              People who understand the science of using data to build
+              consistent revenue growth engines.
+            </p>
+            <div className="flex gap-x-6">
+              <button className="text-white text-center bg-customBlue rounded-lg px-8 py-5 font-medium leading-none transition-all duration-[350ms] ease-in transform hover:scale-105 hover:shadow-lg hover:bg-customBlue2">
+                Get free estimation
+              </button>
+
+              <button className="text-customBlue text-center bg-transparent border border-customBlue rounded-lg px-8 py-5 text-base leading-none transition-all duration-[350ms] ease-in transform hover:scale-105 hover:bg-customBlue hover:text-white">
+                Our Work
+              </button>
+            </div>
+          </div>
+          <img
+            className="w-[1000px] h-[500px]"
+            src="/images/hero.svg"
+            alt="hero-icon"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HeroSection;

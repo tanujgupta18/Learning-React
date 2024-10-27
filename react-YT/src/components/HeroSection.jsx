@@ -1,21 +1,27 @@
 const HeroSection = () => {
   return (
-    <div className="pt-20 pb-10 overflow-hidden">
+    <div className="pt-[165px] pb-10 overflow-hidden">
       <div className="flex flex-col px-6 my-0 mx-auto">
         <div className="flex mb-10">
           <div className="flex flex-col max-w-[480px] px-0 ml-2.5 mr-0">
-            <p className="text-customBlue text-2xl pb-4 tracking-[-0.02em]">
+            <p
+              style={{
+                wordSpacing: "-2px",
+              }}
+              className="text-customBlue text-[24px] leading-[24px] pb-4 tracking-[-0.02em]"
+            >
               Full stack technology agency
             </p>
             <h1
               style={{
                 textShadow: "0 3px 6px #302cff1c",
+                wordSpacing: "1px",
               }}
-              className="text-5xl font-bold text-customBlue2 -mr-[157px] mb-4 leading-[1.3] tracking-[-0.02em]"
+              className="text-[46px] font-bold no-underline text-customBlue2 -mr-[157px] mb-4 ml-0 pb-0 leading-[1.3] tracking-[-0.02em] "
             >
               We are a team of Full-Stack MarTech Experts
             </h1>
-            <p className="tracking-normal max-w-[451px] mb-[39px] mr-0 text-gray-600">
+            <p className="max-w-[451px] mb-[39px] mr-0 text-gray-600">
               People who understand the science of using data to build
               consistent revenue growth engines.
             </p>

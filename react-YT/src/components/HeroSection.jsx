@@ -1,6 +1,11 @@
 const HeroSection = () => {
   return (
-    <div className="pt-[165px] pb-10 overflow-hidden">
+    <div
+      style={{
+        wordSpacing: "-0.16px",
+      }}
+      className="pt-[165px] pb-10 overflow-hidden w-[1263px] h-[666px]"
+    >
       <div className="flex flex-col px-6 my-0 mx-auto">
         <div className="flex mb-10">
           <div className="flex flex-col max-w-[480px] px-0 ml-2.5 mr-0">

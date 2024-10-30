@@ -31,11 +31,11 @@ const HeroSection = () => {
               consistent revenue growth engines.
             </p>
             <div className="flex gap-x-6">
-              <button className="text-white text-center bg-customBlue rounded-lg px-8 py-5 font-medium leading-none transition-all duration-[350ms] ease-in transform hover:scale-105 hover:shadow-lg hover:bg-customBlue2">
+              <button className="text-white text-center bg-customBlue rounded-lg px-8 py-5 font-medium leading-none  transition-all duration-[150ms] ease-in transform hover:scale-95 hover:shadow-lg hover:bg-customBlue2">
                 Get free estimation
               </button>
 
-              <button className="text-customBlue text-center bg-transparent border border-customBlue rounded-lg px-8 py-5 text-base leading-none transition-all duration-[350ms] ease-in transform hover:scale-105 hover:bg-customBlue hover:text-white">
+              <button className="text-customBlue text-center bg-transparent border border-customBlue rounded-lg px-8 py-5 text-base leading-none transition-all duration-[200ms] ease-in transform hover:scale-95 hover:bg-customBlue hover:text-white">
                 Our Work
               </button>
             </div>

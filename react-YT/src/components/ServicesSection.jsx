@@ -13,8 +13,15 @@ const ServicesSection = () => {
     {
       imageSrc: "/images/grid2.svg",
       title: "HubSpot Onboarding and Implementation",
-      description:
-        "As esteemed HubSpot partners, we provide customised solutions carefully built to enhance sales efficiency and propel revenue growth.‍",
+      description: (
+        <>
+          <br />
+          As esteemed HubSpot partners, we provide customised solutions
+          carefully built to enhance sales efficiency and propel revenue
+          growth.‍
+          <br />
+        </>
+      ),
       link: "/",
     },
     {
@@ -31,12 +38,16 @@ const ServicesSection = () => {
         "When it comes to early stages MVP development, no-code app development should be your go to choice and we will help you with there.",
       link: "/",
     },
-    ,
     {
       imageSrc: "/images/grid5.svg",
       title: "Automations & Integrations",
-      description:
-        "Leverage multiple apps and automate tedious tasks to boost your team’s efficiency and nurture customer relationships effectively.",
+      description: (
+        <>
+          Leverage multiple apps and automate tedious tasks to boost your team’s
+          efficiency and nurture customer relationships effectively.
+          <br />
+        </>
+      ),
       link: "/",
     },
     {

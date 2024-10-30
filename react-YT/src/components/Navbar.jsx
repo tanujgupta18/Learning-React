@@ -5,27 +5,22 @@ const Navbar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   return (
-    <div className="bg-white pt-0 pb-[1.15rem] fixed inset-x-0 top-0">
+    <div className="bg-white pt-0 pb-[1.15rem] fixed inset-x-0 top-0 z-10">
       <div className="flex justify-between items-center max-w-[1257px] h-[67px] mx-auto px-6">
-        <a href="/">
+        <a href="/" aria-label="Homepage">
           <img
             src="/images/grorapid.png"
             className="w-[240px] max-w-full pl-0 h-auto -ml-[35px]"
-            alt="logo"
+            alt="Grorapid logo"
           />
         </a>
         <div className="flex flex-row justify-between items-center">
-          <nav className="float-right relative w-[606px] mt-0">
-            <ul
-              style={{
-                wordSpacing: "-0.16px",
-              }}
-              className="flex justify-end items-center my-0 pl-0 list-none"
-            >
+          <nav className="relative w-[606px] mt-0">
+            <ul className="flex justify-end items-center my-0 pl-0 list-none">
               <li className="cursor-pointer mb-0 mr-8">
                 <a
                   href="#"
-                  className="font-medium leading-[1em] no-underline text-customBlue2 items-center"
+                  className="font-medium leading-[1em] text-customBlue2"
                 >
                   Home
                 </a>
@@ -36,7 +31,11 @@ const Navbar = () => {
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
-                <div className="flex items-center">
+                <div
+                  className="flex items-center"
+                  aria-haspopup="true"
+                  aria-expanded={isServicesOpen}
+                >
                   <span>Services</span>
                   <svg
                     className="ml-0.5 w-5 h-5 fill-current"
@@ -47,7 +46,7 @@ const Navbar = () => {
                   </svg>
                 </div>
                 {isServicesOpen && (
-                  <ul className="absolute left-0 mt-2 w-72 bg-white rounded-md text-left py-2 border-none">
+                  <ul className="absolute left-0 mt-2 w-72 bg-white rounded-md text-left py-2 border-none shadow-md">
                     <li className="px-4 py-2 hover:bg-gray-100">
                       <a href="#">Webflow Development Services</a>
                     </li>
@@ -63,7 +62,11 @@ const Navbar = () => {
                 onMouseEnter={() => setIsProductsOpen(true)}
                 onMouseLeave={() => setIsProductsOpen(false)}
               >
-                <div className="flex items-center">
+                <div
+                  className="flex items-center"
+                  aria-haspopup="true"
+                  aria-expanded={isProductsOpen}
+                >
                   <span>Products</span>
                   <svg
                     className="ml-0.5 w-5 h-5 fill-current"
@@ -74,12 +77,12 @@ const Navbar = () => {
                   </svg>
                 </div>
                 {isProductsOpen && (
-                  <ul className="absolute left-0 mt-2 w-64 bg-white rounded-md text-left py-2 border-none">
+                  <ul className="absolute left-0 mt-2 w-64 bg-white rounded-md text-left py-2 border-none shadow-md">
                     <li className="px-4 py-2 hover:bg-gray-100">
                       <a href="#">Services Store</a>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                      <a href="#">Design & Devlopment Store</a>
+                      <a href="#">Design & Development Store</a>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
                       <a href="#">Grorapid Cold Emailing Suite</a>
@@ -100,7 +103,10 @@ const Navbar = () => {
             </ul>
           </nav>
           <a href="/">
-            <button className="w=[200px] text-center px-[29px] py-4 text-white bg-customBlue rounded-[10px]  font-medium leading-[1em] transition-all duration-[350ms] ease-in transform hover:scale-105 hover:shadow-lg hover:bg-customBlue2">
+            <button
+              type="button"
+              className="px-[29px] py-4 text-white bg-customBlue rounded-[10px] font-medium leading-[1em] transition-all duration-[350ms] ease-in transform hover:scale-105 hover:shadow-lg hover:bg-customBlue2"
+            >
               Get free estimation
             </button>
           </a>

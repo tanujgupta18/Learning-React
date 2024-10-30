@@ -8,6 +8,8 @@ module.exports = {
       colors: {
         customBlue: "#302cff",
         customBlue2: "#1d1c43",
+        customBlue3: "#50507e",
+        customBlue4: "#070721",
       },
       textShadow: {
         customShadow: "0px 3px 6px rgba(48, 44, 255, 0.11)",

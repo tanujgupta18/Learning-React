@@ -105,7 +105,7 @@ const Navbar = () => {
           <a href="/">
             <button
               type="button"
-              className="px-[29px] py-4 text-white bg-customBlue rounded-[10px] font-medium leading-[1em] transition-all duration-[350ms] ease-in transform hover:scale-105 hover:shadow-lg hover:bg-customBlue2"
+              className="px-[29px] py-4 text-white bg-customBlue rounded-[10px] font-medium leading-[1em]  transition-all duration-[250ms] ease-in transform hover:scale-95 hover:shadow-lg hover:bg-customBlue2"
             >
               Get free estimation
             </button>

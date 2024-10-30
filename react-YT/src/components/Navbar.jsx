@@ -46,7 +46,7 @@ const Navbar = () => {
                   </svg>
                 </div>
                 {isServicesOpen && (
-                  <ul className="absolute left-0 mt-2 w-72 bg-white rounded-md text-left py-2 border-none shadow-md">
+                  <ul className="absolute left-0 mt-2 w-72 rounded-md text-left py-2 border-none">
                     <li className="px-4 py-2 hover:bg-gray-100">
                       <a href="#">Webflow Development Services</a>
                     </li>
@@ -77,7 +77,7 @@ const Navbar = () => {
                   </svg>
                 </div>
                 {isProductsOpen && (
-                  <ul className="absolute left-0 mt-2 w-64 bg-white rounded-md text-left py-2 border-none shadow-md">
+                  <ul className="absolute left-0 mt-2 w-64 bg-white rounded-md text-left py-2 border-none ">
                     <li className="px-4 py-2 hover:bg-gray-100">
                       <a href="#">Services Store</a>
                     </li>

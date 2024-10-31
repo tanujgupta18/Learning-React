@@ -20,7 +20,7 @@ const Navbar = () => {
               <li className="cursor-pointer mb-0 mr-8">
                 <a
                   href="#"
-                  className="font-medium leading-[1em] text-customBlue2"
+                  className="font-medium leading-[1em] text-customBlue2 hover:text-customBlue"
                 >
                   Home
                 </a>

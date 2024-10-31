@@ -1,5 +1,5 @@
 import React from "react";
-import ProcessCard from "./ProcessCard"; // Adjust the path as necessary
+import ProcessCard from "./ProcessCard";
 
 const ProcessSection = () => {
   const processSteps = [

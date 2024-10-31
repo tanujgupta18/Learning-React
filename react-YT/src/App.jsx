@@ -6,6 +6,7 @@ import WorkSection from "./components/WorkSection";
 import ServicesSection from "./components/ServicesSection";
 import WhyChoose from "./components/WhyChoose";
 import AchievementSection from "./components/AchievementSection";
+import ProcessSection from "./components/ProcessSection";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <ServicesSection />
       <WhyChoose />
       <AchievementSection />
+      <ProcessSection />
     </>
   );
 }

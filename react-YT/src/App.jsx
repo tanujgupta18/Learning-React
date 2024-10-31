@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import WorkSection from "./components/WorkSection";
 import ServicesSection from "./components/ServicesSection";
 import WhyChoose from "./components/WhyChoose";
+import AchievementSection from "./components/AchievementSection";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <WorkSection />
       <ServicesSection />
       <WhyChoose />
+      <AchievementSection />
     </>
   );
 }

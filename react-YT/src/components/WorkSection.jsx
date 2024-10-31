@@ -127,7 +127,7 @@ const WorkSection = () => {
           </div>
         </div>
         <div className="flex flex-col mt-5 items-center">
-          <button className="text-customBlue text-center bg-transparent border border-customBlue rounded-lg px-8 py-5 text-base leading-none transition-all duration-[350ms] ease-in transform hover:scale-105 hover:bg-customBlue hover:text-white">
+          <button className="text-customBlue text-center bg-transparent border border-customBlue rounded-lg px-8 py-5 text-base leading-none transition-all duration-[200ms] ease-in transform hover:scale-95 hover:bg-customBlue hover:text-white">
             View all case studies
           </button>
         </div>

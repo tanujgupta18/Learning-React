@@ -11,9 +11,7 @@ module.exports = {
         customBlue3: "#50507e",
         customBlue4: "#070721",
         customBlue5: "#a0a0c7",
-      },
-      textShadow: {
-        customShadow: "0px 3px 6px rgba(48, 44, 255, 0.11)",
+        customBlue6: "#cecddd",
       },
     },
   },

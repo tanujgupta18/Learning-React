@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import WorkSection from "./components/WorkSection";
 import ServicesSection from "./components/ServicesSection";
+import WhyChoose from "./components/WhyChoose";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <HeroSection />
       <WorkSection />
       <ServicesSection />
+      <WhyChoose />
     </>
   );
 }

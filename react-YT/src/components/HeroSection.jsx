@@ -4,7 +4,7 @@ const HeroSection = () => {
       style={{
         wordSpacing: "-0.16px",
       }}
-      className="pt-[165px] pb-10 overflow-hidden w-[1263px] h-[666px]"
+      className="section-hero pt-[80px] pb-10 overflow-hidden w-[1263px] h-[666px]"
     >
       <div className="flex flex-col px-6 my-0 mx-auto">
         <div className="flex mb-10">
@@ -13,7 +13,7 @@ const HeroSection = () => {
               style={{
                 wordSpacing: "-2px",
               }}
-              className="text-customBlue text-[24px] leading-[24px] pb-4 tracking-[-0.02em]"
+              className="text-customBlue text-[24px] leading-[24px] pb-4"
             >
               Full stack technology agency
             </p>

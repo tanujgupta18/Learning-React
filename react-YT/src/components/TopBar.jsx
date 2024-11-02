@@ -8,14 +8,15 @@ const TopBar = () => {
   };
 
   if (!isVisible) return null;
+
   return (
     <div
       style={{
         letterSpacing: " -.01em",
       }}
-      className="sticky inset-0 flex justify-center items-center z-50 bg-customBlue text-white text-base leading-[1.6em]"
+      className="flex justify-center items-center z-50 bg-customBlue text-white text-base leading-[1.6em] h-[60px] relative"
     >
-      <div className="flex justify-center items-center opacity-100 py-3 px-[56px] overflow-hidden max-w-[1240px] w-full">
+      <div className="flex justify-center items-center opacity-100 py-3 px-[56px] max-w-[1240px] w-full">
         <div className="text-[14px] text-center">
           <strong className="text-[16px]">Christmas Came Early🎄: </strong>
           Get 35% More Conversions by Our Free GA4 Audit
@@ -31,7 +32,7 @@ const TopBar = () => {
         <img
           src="/images/close.svg"
           alt="Close"
-          className="cursor-pointer max-w-full ml-4 absolute inset-auto right-8 transition-transform duration-200 ease-in-out transform-gpu hover:scale-90"
+          className="cursor-pointer max-w-full ml-4 absolute right-8 transition-transform duration-200 ease-in-out transform-gpu hover:scale-90"
           onClick={handleClose}
         />
       </div>

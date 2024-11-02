@@ -13,7 +13,6 @@ import TopBar from "./components/TopBar";
 function App() {
   return (
     <>
-      <TopBar />
       <Navbar />
       <HeroSection />
       <WorkSection />

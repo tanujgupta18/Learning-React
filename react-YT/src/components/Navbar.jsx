@@ -1,14 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TopBar from "./TopBar";
 
 const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  const handleScroll = () => {
+    setIsSticky(window.scrollY > 60); // Change this threshold as needed
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div>
       <TopBar />
-      <div className="bg-white pt-0 pb-[1.15rem] sticky top-[60px] z-10">
+      <div
+        className={`bg-white pt-0 z-10 ${
+          isSticky ? "fixed top-0 left-0 right-0" : "sticky top-[60px]"
+        }`}
+      >
         <div className="flex justify-between items-center max-w-[1257px] h-[67px] mx-auto px-6">
           <a href="/" aria-label="Homepage">
             <img

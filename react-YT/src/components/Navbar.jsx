@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
 
   const handleScroll = () => {
-    setIsSticky(window.scrollY > 60); // Change this threshold as needed
+    setIsSticky(window.scrollY > 60);
   };
 
   useEffect(() => {
@@ -66,10 +66,10 @@ const Navbar = () => {
                   </div>
                   {isServicesOpen && (
                     <ul className="absolute left-0 mt-2 w-72 bg-white rounded-md text-left py-2 border-none">
-                      <li className="px-4 py-2 hover:bg-gray-100">
+                      <li className="px-4 py-2">
                         <a href="#">Webflow Development Services</a>
                       </li>
-                      <li className="px-4 py-2 hover:bg-gray-100">
+                      <li className="px-4 py-2">
                         <a href="#">HubSpot Services</a>
                       </li>
                     </ul>
@@ -97,13 +97,13 @@ const Navbar = () => {
                   </div>
                   {isProductsOpen && (
                     <ul className="absolute left-0 mt-2 w-64 bg-white rounded-md text-left py-2 border-none">
-                      <li className="px-4 py-2 hover:bg-gray-100">
+                      <li className="px-4 py-2">
                         <a href="#">Services Store</a>
                       </li>
-                      <li className="px-4 py-2 hover:bg-gray-100">
+                      <li className="px-4 py-2">
                         <a href="#">Design & Development Store</a>
                       </li>
-                      <li className="px-4 py-2 hover:bg-gray-100">
+                      <li className="px-4 py-2">
                         <a href="#">Grorapid Cold Emailing Suite</a>
                       </li>
                     </ul>

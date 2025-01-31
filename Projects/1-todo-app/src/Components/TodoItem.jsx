@@ -1,7 +1,4 @@
-function TodoItem() {
-  let todoInput = "Buy Milk";
-  let todoDate = "31/01/2025";
-
+function TodoItem({ todoInput, todoDate }) {
   return (
     <div className="grid grid-cols-10 gap-4 items-center py-2">
       <div className="col-span-4 text-gray-700">{todoInput}</div>

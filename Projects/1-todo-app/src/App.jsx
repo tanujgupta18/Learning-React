@@ -8,11 +8,17 @@ function App() {
   const [todoItems, setTodoItems] = useState([]);
 
   const handleNewItem = (itemName, itemDate) => {
-    // console.log(`New Item Added: ${itemName} Date: ${itemDate}`);
     const newTodoItems = [
       ...todoItems,
       { todoInput: itemName, todoDate: itemDate },
     ];
+    setTodoItems(newTodoItems);
+  };
+
+  const handleDeleteItem = (todoItemName) => {
+    const newTodoItems = todoItems.filter(
+      (item) => item.todoInput !== todoItemName
+    );
     setTodoItems(newTodoItems);
   };
 
@@ -22,7 +28,7 @@ function App() {
         <AppName />
         <AddTodo onNewItem={handleNewItem} />
         {todoItems.length === 0 && <WelcomeMessage />}
-        <TodoItems todoItems={todoItems} />
+        <TodoItems todoItems={todoItems} onDeleteClick={handleDeleteItem} />
       </div>
     </center>
   );

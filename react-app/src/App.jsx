@@ -1,4 +1,9 @@
 import { useState } from "react";
+import Counter from "./Components/Counter";
+import UserProfile from "./Components/UserProfile";
+import ToggleText from "./Components/ToggleText";
+import ColorChanger from "./Components/ColorChanger";
+import DarkModeToggle from "./Components/DarkModeToggle";
 
 function App() {
   const [foodItems, setFoodItems] = useState([
@@ -23,7 +28,7 @@ function App() {
 
   return (
     <div className="m-10">
-      <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
+      {/* <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
         <h1 className="text-3xl font-bold text-center mb-6">Healthy Food</h1>
         <div className="flex space-x-4 mb-4">
           <input
@@ -54,7 +59,12 @@ function App() {
             ))}
           </ul>
         )}
-      </div>
+      </div> */}
+      {/* <Counter /> */}
+      {/* <UserProfile /> */}
+      {/* <ToggleText /> */}
+      {/* <ColorChanger /> */}
+      <DarkModeToggle />
     </div>
   );
 }

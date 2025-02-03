@@ -4,6 +4,7 @@ import UserProfile from "./Components/UserProfile";
 import ToggleText from "./Components/ToggleText";
 import ColorChanger from "./Components/ColorChanger";
 import DarkModeToggle from "./Components/DarkModeToggle";
+import LikeButton from "./Components/LikeButton";
 
 function App() {
   const [foodItems, setFoodItems] = useState([
@@ -64,7 +65,8 @@ function App() {
       {/* <UserProfile /> */}
       {/* <ToggleText /> */}
       {/* <ColorChanger /> */}
-      <DarkModeToggle />
+      {/* <DarkModeToggle /> */}
+      <LikeButton />
     </div>
   );
 }

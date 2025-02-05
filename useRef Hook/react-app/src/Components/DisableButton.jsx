@@ -1,15 +1,16 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 function DisableButton() {
   const buttonRef = useRef(null);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const handleClick = () => {
-    buttonRef.current.disabled = true; // Disable button after first click
+    setIsDisabled(true);
   };
 
   return (
-    <button ref={buttonRef} onClick={handleClick}>
-      Click to Disable Me
+    <button ref={buttonRef} onClick={handleClick} disabled={isDisabled}>
+      {isDisabled ? "I am Disabled" : "Click to Disable Me"}
     </button>
   );
 }

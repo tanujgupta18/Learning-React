@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 
 const ExpensiveComponent = ({ num }) => {
   const compute = (n) => {
@@ -6,7 +6,8 @@ const ExpensiveComponent = ({ num }) => {
     return n * 2;
   };
 
-  const doubledValue = compute(num); // Recomputes on every render!
+  // useMemo memoizes the computed value
+  const doubledValue = useMemo(() => compute(num), [num]);
 
   return <p>Computed Value: {doubledValue}</p>;
 };

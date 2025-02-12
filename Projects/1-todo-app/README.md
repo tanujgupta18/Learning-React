@@ -8,12 +8,12 @@ This Todo app is built using **React**. It allows users to add, view, and delete
 
 The app is divided into the following main components:
 
-1. **App.js**
-2. **AddTodo.js**
-3. **TodoItems.js**
-4. **TodoItem.js**
-5. **WelcomeMessage.js**
-6. **AppName.js**
+1. **App.jsx**
+2. **AddTodo.jsx**
+3. **TodoItems.jsx**
+4. **TodoItem.jsx**
+5. **WelcomeMessage.jsx**
+6. **AppName.jsx**
 
 Each component plays a specific role in the application.
 
@@ -21,14 +21,14 @@ Each component plays a specific role in the application.
 
 ## How the App Works
 
-### 1. **App.js**
+### 1. **App.jsx**
 
 This is the root component of your application. It is responsible for:
 
 - **Managing the state** of the todo list using the `useState` hook.
 - **Passing state and handlers** (functions to add and delete todos) down to child components via props.
 
-**Key Code in `App.js`:**
+**Key Code in `App.jsx`:**
 
 ```js
 const [todoItems, setTodoItems] = useState([]);
@@ -77,16 +77,16 @@ Finally, in the `return` statement, you render the following components:
 
 ---
 
-### 2. **AddTodo.js**
+### 2. **AddTodo.jsx**
 
 This component displays the form where users can enter a new todo item.
 
-**Key Functions in `AddTodo.js`:**
+**Key Functions in `AddTodo.jsx`:**
 
 - `useState("")`: Initializes `todoName` and `dueDate` as empty strings. These will hold the values of the user input.
 - `handleNameChange`: Updates the `todoName` state as the user types in the input field.
 - `handleDateChange`: Updates the `dueDate` state as the user selects a date.
-- `handleAddButtonClicked`: This function is triggered when the "Add" button is clicked. It checks if both `todoName` and `dueDate` are filled out. If not, an alert is shown to prompt the user to complete the form. If both fields are filled, the `onNewItem` function (which is passed as a prop from `App.js`) is called to add the new todo item to the list.
+- `handleAddButtonClicked`: This function is triggered when the "Add" button is clicked. It checks if both `todoName` and `dueDate` are filled out. If not, an alert is shown to prompt the user to complete the form. If both fields are filled, the `onNewItem` function (which is passed as a prop from `App.jsx`) is called to add the new todo item to the list.
 
 **JSX Rendering**:
 
@@ -101,14 +101,14 @@ This component displays the form where users can enter a new todo item.
 
 ---
 
-### 3. **TodoItems.js**
+### 3. **TodoItems.jsx**
 
 This component is responsible for rendering the list of todos.
 
-**Key Code in `TodoItems.js`:**
+**Key Code in `TodoItems.jsx`:**
 
 - **`todoItems.map()`**: Iterates through the `todoItems` array (passed as a prop) and renders a `TodoItem` component for each item in the array.
-- **onDeleteClick**: The `handleDeleteItem` function (passed down from `App.js`) is passed as a prop to the `TodoItem` component. It will be triggered when the delete button is clicked for a particular todo item.
+- **onDeleteClick**: The `handleDeleteItem` function (passed down from `App.jsx`) is passed as a prop to the `TodoItem` component. It will be triggered when the delete button is clicked for a particular todo item.
 
 ```js
 {
@@ -127,14 +127,14 @@ This code ensures that every todo item in the list is rendered correctly and pro
 
 ---
 
-### 4. **TodoItem.js**
+### 4. **TodoItem.jsx**
 
 This component represents an individual todo item and provides the delete functionality.
 
-**Key Code in `TodoItem.js`:**
+**Key Code in `TodoItem.jsx`:**
 
 - It receives the `todoInput`, `todoDate`, and `onDeleteClick` props.
-- **onDeleteClick**: This function is triggered when the "Delete" button is clicked. It calls the `onDeleteClick` function passed from the parent (`App.js`), passing the `todoInput` (name) as an argument to identify which todo item to delete.
+- **onDeleteClick**: This function is triggered when the "Delete" button is clicked. It calls the `onDeleteClick` function passed from the parent (`App.jsx`), passing the `todoInput` (name) as an argument to identify which todo item to delete.
 
 ```js
 <button onClick={() => onDeleteClick(todoInput)}>Delete</button>
@@ -142,9 +142,9 @@ This component represents an individual todo item and provides the delete functi
 
 ---
 
-### 5. **WelcomeMessage.js**
+### 5. **WelcomeMessage.jsx**
 
-This component displays a message when there are no todo items in the list. It's rendered conditionally in `App.js` when `todoItems.length === 0`.
+This component displays a message when there are no todo items in the list. It's rendered conditionally in `App.jsx` when `todoItems.length === 0`.
 
 ```js
 {
@@ -156,7 +156,7 @@ It shows a friendly, encouraging message such as "Enjoy Your Day!" to welcome th
 
 ---
 
-### 6. **AppName.js**
+### 6. **AppName.jsx**
 
 This component simply displays the name of the app ("Todo App"). It’s rendered at the top of the page to give users a clear idea of what the app is about.
 
@@ -172,12 +172,12 @@ This component simply displays the name of the app ("Todo App"). It’s rendered
 
 2. **State Management**:
 
-   - **useState** is used in `App.js` to manage the todo list state (`todoItems`), as well as in `AddTodo.js` to manage the user input for the todo name and due date.
+   - **useState** is used in `App.jsx` to manage the todo list state (`todoItems`), as well as in `AddTodo.jsx` to manage the user input for the todo name and due date.
    - The state is updated in response to user interactions (like adding or deleting todos).
 
 3. **Props**:
 
-   - Data is passed between components using props. For example, `todoItems` is passed from `App.js` to `TodoItems.js`, and the `onDeleteClick` function is passed down to the `TodoItem` components.
+   - Data is passed between components using props. For example, `todoItems` is passed from `App.jsx` to `TodoItems.jsx`, and the `onDeleteClick` function is passed down to the `TodoItem` components.
 
 4. **Event Handling**:
 

@@ -11,6 +11,7 @@ function App({ url = "https://dummyjson.com/products" }) {
       setLoading(true);
       const response = await fetch(getUrl);
       const data = await response.json();
+      console.log(data);
 
       if (data && data.products && data.products.length > 0) {
         setData(data.products);
@@ -42,36 +43,57 @@ function App({ url = "https://dummyjson.com/products" }) {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 pt-16">
-      <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-        <div className="scroll-progress-track h-2 bg-gray-300 rounded-full">
+    <div className="min-h-screen bg-gray-50 pt-16">
+      <div className="fixed top-0 left-0 w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-md z-50">
+        <div className="scroll-progress-track h-2 bg-gray-300 ">
           <div
             style={{ width: `${scrollPercent}%` }}
-            className="h-full bg-blue-500 transition-all duration-200"
+            className="h-full bg-gradient-to-r from-blue-500 to-teal-500 transition-all duration-200"
           ></div>
         </div>
       </div>
 
-      <div className="container space-y-4 mt-8">
+      <div className="container mx-auto p-4 space-y-6">
         {loading && (
-          <p className="text-center text-xl text-gray-600">Loading...</p>
+          <div className="text-center py-6">
+            <p className="text-xl text-gray-600">Loading...</p>
+          </div>
         )}
         {errorMsg && (
-          <p className="text-center text-xl text-red-600">{errorMsg}</p>
+          <div className="text-center py-6">
+            <p className="text-xl text-red-600">{errorMsg}</p>
+          </div>
         )}
         {data && data.length > 0 ? (
-          data.map((item) => (
-            <div
-              key={item.id}
-              className="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <p className="text-xl font-semibold text-gray-800">
-                {item.title}
-              </p>
-            </div>
-          ))
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {data.map((item) => (
+              <div
+                key={item.id}
+                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+              >
+                <img
+                  src={item.thumbnail || "https://via.placeholder.com/400x300"}
+                  alt={item.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <p className="text-xl font-semibold text-gray-800">
+                    {item.title}
+                  </p>
+                  <p className="text-gray-600 text-sm mt-2">
+                    {item.description}
+                  </p>
+                  <p className="text-lg font-bold text-blue-600 mt-4">
+                    ${item.price}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         ) : (
-          <p className="text-center text-xl text-gray-600">No products found</p>
+          <div className="text-center py-6">
+            <p className="text-xl text-gray-600">No products found</p>
+          </div>
         )}
       </div>
     </div>

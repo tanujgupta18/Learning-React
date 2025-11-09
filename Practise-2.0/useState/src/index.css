@@ -1,0 +1,15 @@
+* {
+  background-color: #111;
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+button {
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,19 @@
+* {
+  background-color: #111;
+  color: #fff;
+}
+
+form {
+  padding: 5px;
+}
+
+form button {
+  margin-left: 10px;
+}
+
+button {
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}

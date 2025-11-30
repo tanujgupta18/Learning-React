@@ -10,6 +10,8 @@ import Product from "./pages/Product";
 import Men from "./pages/Men";
 import Women from "./pages/Women";
 import Kids from "./pages/Kids";
+import Courses from "./pages/Courses";
+import CourseDetail from "./pages/CourseDetail";
 
 const App = () => {
   return (
@@ -25,6 +27,8 @@ const App = () => {
           <Route path="kids" element={<Kids />}></Route>
         </Route>
 
+        <Route path="/courses" element={<Courses />}></Route>
+        <Route path="/courses/:id" element={<CourseDetail />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />

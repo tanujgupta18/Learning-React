@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Product from "./pages/Product";
 import Men from "./pages/Men";
 import Women from "./pages/Women";
+import Kids from "./pages/Kids";
 
 const App = () => {
   return (
@@ -18,9 +19,12 @@ const App = () => {
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/product" element={<Product />}></Route>
-        <Route path="/product/men" element={<Men />}></Route>
-        <Route path="/product/women" element={<Women />}></Route>
+        <Route path="/product" element={<Product />}>
+          <Route path="men" element={<Men />}></Route>
+          <Route path="women" element={<Women />}></Route>
+          <Route path="kids" element={<Kids />}></Route>
+        </Route>
+
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />

@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./components/Card";
 import Counter from "./components/Counter";
 import Toggle from "./components/Toggle";
+import ContactForm from "./components/ContactForm";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Card title="React" description="UI Library" />
       <Counter />
       <Toggle />
+      <ContactForm />
     </div>
   );
 };

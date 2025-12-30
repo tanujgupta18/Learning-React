@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./components/Card";
+import Counter from "./components/Counter";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       </h1>
 
       <Card title="React" description="UI Library" />
+      <Counter />
     </div>
   );
 };

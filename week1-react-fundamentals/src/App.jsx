@@ -3,6 +3,7 @@ import Card from "./components/Card";
 import Counter from "./components/Counter";
 import Toggle from "./components/Toggle";
 import ContactForm from "./components/ContactForm";
+import UserList from "./components/UserList";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Counter />
       <Toggle />
       <ContactForm />
+      <UserList />
     </div>
   );
 };

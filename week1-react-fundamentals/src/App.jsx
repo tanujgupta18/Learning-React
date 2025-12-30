@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./components/Card";
 import Counter from "./components/Counter";
+import Toggle from "./components/Toggle";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
 
       <Card title="React" description="UI Library" />
       <Counter />
+      <Toggle />
     </div>
   );
 };

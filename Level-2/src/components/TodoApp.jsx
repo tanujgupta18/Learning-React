@@ -11,11 +11,11 @@ const TodoApp = () => {
   };
 
   const deleteTodo = (index) => {
-    setTodoList((prev) => prev.filter((_, i) => i !== index));
+    setTodoList(todoList.filter((item, i) => i !== index));
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="min-h-[60vh] bg-gray-100 flex items-center justify-center">
       <div className="bg-white w-96 p-8 rounded-2xl shadow-md border border-gray-200">
         <h1 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
           Todo Application
